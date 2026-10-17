@@ -13,10 +13,13 @@
 }
 html {
     scroll-behavior: smooth;
+    background-color: var(--color-dark);
+    color-scheme: dark;
 }
 body {
     margin: 0;
     font-family: "IBM Plex Mono", monospace;
+    background-color: var(--color-dark);
 }
 button {
     appearance: none;
