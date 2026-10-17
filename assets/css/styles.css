@@ -186,6 +186,8 @@ button {
     font-family: "IBM Plex Mono", monospace;
     font-size: clamp(10px, 0.85vw, 13px);
     text-transform: uppercase;
+
+    color: var(--color-dark);
 }
 
 /* =========================
