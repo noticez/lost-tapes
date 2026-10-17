@@ -38,7 +38,7 @@ button {
     linear-gradient(
       rgb(0 0 0 / 25%),
       rgb(0 0 0 / 25%)
-    ), url(../media/background7.jpg);
+    ), url(../media/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
