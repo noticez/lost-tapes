@@ -805,3 +805,80 @@ button {
         width: 100%;
     }
 }
+
+/* =========================================================
+   MOTION LAYER (GSAP / Lenis)
+========================================================= */
+
+/* Lenis required styles */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Hidden initial states. Class is added only when JS motion is active,
+   and removed automatically if GSAP fails to load (see head script). */
+.js-motion .header-word,
+.js-motion .header-button,
+.js-motion .last-updated,
+.js-motion .albums-heading,
+.js-motion .album-card,
+.js-motion .footer-brand,
+.js-motion .footer-info,
+.js-motion .footer-nav,
+.js-motion .footer-bottom,
+.js-motion .error-top,
+.js-motion .error-eyebrow,
+.js-motion .error-code,
+.js-motion .error-message,
+.js-motion .error-actions,
+.js-motion .error-bottom {
+    opacity: 0;
+}
+
+/* 404 divider: collapsed until GSAP wipes it in (JS motion only) */
+.js-motion .error-divider {
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+}
+
+/* Shared state-change easing for buttons and links */
+.header-button,
+.footer-nav button,
+.error-button,
+.error-back {
+    transition-property: background-color, color, border-color;
+    transition-duration: 350ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Card hover: artwork only, so it never fights GSAP on the card itself */
+.album-art { overflow: hidden; }
+.album-art img {
+    transition: transform 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.album-number { transition: color 300ms ease; }
+
+@media (hover: hover) {
+    .album-card:hover .album-art img { transform: scale(1.04); }
+    .album-card:hover .album-number { color: var(--color-dark); }
+}
+
+/* Keyboard focus */
+.header-button:focus-visible,
+.footer-nav button:focus-visible,
+.error-button:focus-visible,
+.error-back:focus-visible,
+.header-word:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+.album-card:focus-visible {
+    outline: 2px solid var(--color-dark);
+    outline-offset: -4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .album-art img, .album-number { transition: none; }
+}
