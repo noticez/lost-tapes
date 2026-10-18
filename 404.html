@@ -4,21 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#121212">
-    <title>404 - LOST TAPES</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="/assets/js/script.js" defer></script>
+    <title>LOST TAPES</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-background">
-        <div class="error-page">
-            <div class="error-content">
-                <span>404</span>
-                <span>page not found</span>
-            </div>
-        </div>
+        <main class="error-site-container" id="top">
+            <header class="header">
+                <div class="header-logo">
+                    <a href="/" class="header-word">LOST</a>
+                    <a href="/" class="header-word">TAPES</a>
+                </div>
+                <div class="header-bottom">
+                    <nav class="header-nav">
+                        <a href="/home" class="header-button">HOME ↗</a>
+                        <a href="/archive" class="header-button">ARCHIVE ↗</a>
+                        <a href="/artists" class="header-button">ARTISTS ↗</a>
+                        <a href="/labels" class="header-button">LABELS ↗</a>
+                        <a href="/about" class="header-button">ABOUT ↗</a>
+                    </nav>
+                    <div class="last-updated">
+                        <span class="updated-label">LAST UPDATED</span>
+                        <time datetime="2026-10-18">18/10/2026</time>
+                    </div>
+                </div>
+            </header>
+
+
+
+
+            <main class="error-section">
+                <section class="error-card" aria-labelledby="error-title">
+
+                    <div class="error-top">
+                        <span class="error-label">LOST TAPES / SYSTEM MESSAGE</span>
+                        <span class="error-status">
+                            <span class="error-indicator"></span>
+                            STATUS: NOT FOUND
+                        </span>
+                    </div>
+
+                    <div class="error-content">
+                        <span class="error-eyebrow">ERROR REPORT / 004</span>
+
+                        <h1 class="error-code" id="error-title">404<span>!</span></h1>
+
+                        <div class="error-divider"></div>
+
+                        <div class="error-message">
+                            <h2>THIS RECORD<br>DOESN'T EXIST.</h2>
+
+                            <p>
+                                Looks like this record got lost somewhere
+                                between the tapes.
+                            </p>
+                        </div>
+
+                        <div class="error-actions">
+                            <a class="error-button" href="/#albums">
+                                BACK TO ARCHIVE <span>↗</span>
+                            </a>
+
+                            <button class="error-back" type="button" id="go-back">
+                                GO BACK <span>←</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="error-bottom">
+                        <span>ERR_004 / PAGE NOT FOUND</span>
+                        <span>NO SIGNAL <span class="error-indicator"></span></span>
+                    </div>
+
+                </section>
+            </main>
+            <footer class="site-footer">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                    <span class="footer-logo">LOST TAPES<span class="footer-mark">®</span></span>
+                    <span class="footer-caption">UNDERGROUND MUSIC ARCHIVE</span>
+                    </div>
+
+                    <div class="footer-info">
+                    <span class="footer-label">ABOUT THIS PROJECT</span>
+                    <p>
+                        An archive of past releases, forgotten eras,
+                        and sounds worth remembering.
+                    </p>
+                    </div>
+
+                    <div class="footer-nav">
+                    <span class="footer-label">EXPLORE</span>
+                    <button type="button" data-scroll="albums">ALBUMS ↗</button>
+                    <button type="button" data-scroll="top">BACK TO TOP ↑</button>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <span>© 2026 LOST TAPES</span>
+                    <span class="footer-disclaimer">INDEPENDENT FAN-MADE ARCHIVE</span>
+                    <span>MADE FOR THE ARCHIVE<span class="footer-dot"> ■</span></span>
+                </div>
+            </footer>
+        </main>
     </div>
 </body>
 </html>
