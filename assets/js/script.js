@@ -140,7 +140,7 @@
       scrollReveal({
         trigger: card,
         targets: card,
-        covers: card.querySelector(".album-art img"),
+        covers: card.querySelector(".album-art"),
         col: () => columnOf(card),
       })
     );
@@ -205,3 +205,6 @@
  
   window.addEventListener("load", () => ScrollTrigger.refresh());
 })();
+
+
+
